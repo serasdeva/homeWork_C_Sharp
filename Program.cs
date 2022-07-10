@@ -6,7 +6,8 @@ a = 2 b = 10 -> max = 10
 a = -9 b = -3 -> max = -3
 */
 
-MaxNumber();
+//MaxNumber();
+MaxNumber2();
 
 static void MaxNumber()
 {
@@ -38,4 +39,33 @@ static void MaxNumber()
          bullet = Convert.ToInt32(Console.ReadLine()); 
     }
 
+}
+
+/*
+Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+
+2, 3, 7 -> 7
+44 5 78 -> 78
+22 3 9 -> 22
+*/
+
+static void MaxNumber2()
+{
+    Console.Write("Введите первое число: ---> ");
+    int number_a = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите второе число: ---> ");
+    int number_b = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите третье число: ---> ");
+    int number_c = Convert.ToInt32(Console.ReadLine());
+    int maxNumber = number_a;
+
+    if (maxNumber < number_b)
+    {
+        maxNumber = number_b;
+    }
+    if (maxNumber < number_c)
+    {
+        maxNumber = number_c;
+    }
+    Console.WriteLine($"Максимальное из трех чисел равно ---> {maxNumber}");
 }
