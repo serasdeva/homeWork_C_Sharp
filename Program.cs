@@ -7,7 +7,8 @@ a = -9 b = -3 -> max = -3
 */
 
 //MaxNumber();
-MaxNumber2();
+//MaxNumber2();
+EvenNumberOr();
 
 static void MaxNumber()
 {
@@ -68,4 +69,27 @@ static void MaxNumber2()
         maxNumber = number_c;
     }
     Console.WriteLine($"Максимальное из трех чисел равно ---> {maxNumber}");
+}
+
+/*
+Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+4 -> да
+-3 -> нет
+7 -> нет
+*/
+
+void EvenNumberOr()
+{
+    Console.Write("Введите число для проверки на чётность: ---> ");
+    int number_a = Convert.ToInt32(Console.ReadLine());
+    if ((number_a % 2) == 0)
+    {
+        Console.WriteLine($"Число {number_a} чётное, так как это число делится на число 2 без остатка");
+    }
+    else
+    {
+        Console.WriteLine($"Число {number_a} не чётное, так как это число не делится на число 2 без остатка");
+    }
+    
 }
