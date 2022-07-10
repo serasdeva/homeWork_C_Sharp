@@ -8,7 +8,8 @@ a = -9 b = -3 -> max = -3
 
 //MaxNumber();
 //MaxNumber2();
-EvenNumberOr();
+//EvenNumberOr();
+EvenNumbers();
 
 static void MaxNumber()
 {
@@ -92,4 +93,28 @@ void EvenNumberOr()
         Console.WriteLine($"Число {number_a} не чётное, так как это число не делится на число 2 без остатка");
     }
     
+}
+
+/*
+Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+5 -> 2, 4
+8 -> 2, 4, 6, 8
+*/
+
+void EvenNumbers()
+{
+    Console.Write("Введите число для проверки на чётность от 1 до N: ---> ");
+    int number_a = Convert.ToInt32(Console.ReadLine());
+    int count = 1;
+    Console.Write($"Все чётные числа от ( 1 до {number_a} ) = ");
+    while (count <= number_a)
+    {
+        if ((count % 2) == 0)
+            {
+                Console.Write($"[{count}] | ");
+            }
+        count++;
+
+    }
 }
